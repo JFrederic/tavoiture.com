@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<h1 class="text-center">Identifiez-vous</h1>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <form class="login-container" action="/" method="post">
+        <div class="form-group ">
+          <input class="form-control " type="text" name="email" value="" placeholder="email">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="password" name="password" value="" placeholder="password">
+        </div>
+        <input class="btn btn-primary" type="submit" name="" value="Connexion">
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

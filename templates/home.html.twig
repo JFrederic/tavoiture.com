@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+  <div class="jumbotron">
+    <h1>Bienvenue sur tavoiture.com</h1>
+    <p>Ici louez une voiture ...</p>
+    <div class="row">
+  <div class="col-lg-6">
+    <div class="input-group">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+      <input type="text" class="form-control" placeholder="Search for...">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-6 -->
+</div><!-- /.row -->
+    </div>
+    <h3 class="text-center">Dernieres voitures mise en ligne!</h3>
+  <div class="container">
+    <div class="row">
+    {% for vehicle in vehicles|reverse %}
+      <div class="col-sm-4 col-md-3">
+        <div class="thumbnail">
+          <img src="{{vehicle.image}}" alt="photos">
+          <div class="caption">
+            <h3>{{vehicle.marque}} {{vehicle.modele}} </h3>
+            <h4>{{vehicle.price}} €</h4>
+            <a href="/vehicle/{{vehicle.id_vehicle}}" class="btn btn-primary" role="button">Voir</a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  br
+
+  <!-- <h3 class="text-center">Inscrivez gratuitement votre voiture !</h3> -->
+  <p class="text-center"><a class="btn btn-success" href="/vehicle/list" name="button">Voir toutes les voitures</a></p>
+</div>
+{% endblock %}

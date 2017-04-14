@@ -1,0 +1,115 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<h2>Ajouter mon véhicule</h2>
+<div class="container">
+  <div class="col-md-12">
+  <div class="row">
+    <form action="/add/vehicle" class="login-big-container" method="post" >
+      <div class="form-group form-inline">
+        <label for="vehicule">Véhicule : </label>
+        <select  name="brand"  class="form-control mini-select">
+          <option value=""selected disabled>Marque</option>
+          <option value="1">Peugeot</option>
+          <option value="2">Renault</option>
+          <option value="3">BMW</option>
+          <option value="4">Audi</option>
+        </select>
+
+        <select name="model" class="form-control mini-select">
+          <option value=""selected disabled>Modèle</option>
+          <option value="1">308</option>
+          <option value="2">Clio</option>
+          <option value="3">I8</option>
+          <option value="4">A3</option>
+        </select>
+
+        <select name="type" class="form-control mini-select">
+          <option value=""selected disabled>Type</option>
+          <option value="1">Citadine</option>
+          <option value="2">Camionnette</option>
+          <option value="3">Coupé</option>
+          <option value="4">Cabriolet</option>
+        </select>
+      </div>
+
+
+      <div class="form-group form-inline">
+        <label for="vehicule">Caractéristique : </label>
+        <select name="places_number" class="form-control mini-select">
+          <option value=""selected disabled>Nombres de places</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+        </select>
+
+        <select name="fuel" class="form-control mini-select">
+          <option value=""selected disabled>Carburant</option>
+          <option value="Diesel">Diesel</option>
+          <option value="Essence">Essence</option>
+          <option value="Électrique">Électrique</option>
+        </select>
+
+        <select name="power" class="form-control mini-select">
+          <option value=""selected disabled>Puissance</option>
+          <option value="110">110</option>
+          <option value="90">90</option>
+          <option value="80">80</option>
+          <option value="70">70</option>
+        </select>
+
+        <select name="color" class="form-control mini-select">
+          <option value=""selected disabled>Couleur</option>
+          <option value="rouge">rouge</option>
+          <option value="bleu">bleu</option>
+          <option value="noir">noir</option>
+          <option value="jaune">jaune</option>
+        </select>
+
+        <select name="maintenance" class="form-control mini-select">
+          <option value=""selected disabled>État d'entretien</option>
+          <option value="Bon état">Bon état</option>
+          <option value="Neuf">Neuf</option>
+          <option value="Mauvais état">Mauvais état</option>
+          <option value="Pourri">Pourri</option>
+        </select>
+
+      </div>
+
+      <!-- <div class="form-group form-inline">
+        <label for="">Disponibilité</label>
+        <input type="date" name="date_start" value="" placeholder="Date début">
+        <input type="date" name="date_end" value="" placeholder="Date fin">
+      </div> -->
+
+      <div class="form-group form-inline">
+        <label for"Prix">Prix : </label>
+        <input type="number" class="form-control" name="price" value="">
+      </div>
+
+      <!-- <div class="form-group form-inline">
+        <input type="text" name="" value="">
+      </div>  -->
+      <div class="form-group form-inline">
+        <label for="">Adresse</label>
+        <input type="text" class="form-control" name="street" value="" placeholder="addresse">
+        <input type="text" class="form-control" name="zipcode" value=""  placeholder="zipcode">
+        <input type="text" class="form-control" name="city" value="" placeholder="city">
+        <input type="text" class="form-control" name="country" value="" placeholder="country">
+      </div>
+
+
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

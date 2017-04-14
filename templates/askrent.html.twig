@@ -1,0 +1,53 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+<div class="container">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-6">
+          <div class="thumbnail" style="">
+            <img src="{{vehicle.image}}" alt="photos">
+            <div class="caption">
+              <ul class="list-inline">
+                <li>{{vehicle.marque}}</li>
+                <li>{{vehicle.modele}}</li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <form class="login-container" action="/rent/vehicle" method="post">
+          <h2>Demande de location</h2>
+                <div class="form-group ">
+                  <input class="form-control " type="date" name="start_date" value="" >
+                </div>
+                <div class="form-group ">
+                  <input class="form-control "  type="date" name="end_date" value="" >
+                </div>
+
+            <h3>{{vehicle.price}}€ /jour</h3>
+          <input class="btn btn-primary" type="submit" name="" value="Demande de location">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<h2>Caractéristique : </h2>
+
+
+<ul>
+  <li>{{vehicle.power}}</li>
+  <li>{{vehicle.fuel}}</li>
+  <li>{{vehicle.places_number}}</li>
+  <li>{{vehicle.modele}}</li>
+  <li>{{vehicle.color}}</li>
+  <li>{{vehicle.maintenance}}</li>
+  <li>{{vehicle.lastname}},{{vehicle.firstname}},{{vehicle.email}},{{vehicle.phone}}</li>
+</ul>
+
+
+{% endblock %}
